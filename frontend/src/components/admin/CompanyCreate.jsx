@@ -17,7 +17,7 @@ const CompanyCreate = () => {
   const registerNewCompany = async () => {
     try {
       const res = await axios.post(
-        `https://job-portal-itdo.onrender.com/api/v1/company/register`,
+        `${COMPANY_API_END_POINT}/register`,
         { companyName },
         {
           headers: {

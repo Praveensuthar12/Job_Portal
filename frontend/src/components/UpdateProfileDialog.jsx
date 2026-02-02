@@ -53,7 +53,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `https://job-portal-itdo.onrender.com/api/v1/user/profile/update`,
+        `${USER_API_END_POINT}/profile/update`,
         formData,
         {
           headers: {

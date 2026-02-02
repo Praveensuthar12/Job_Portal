@@ -47,7 +47,7 @@ const CompanySetup = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `https://job-portal-itdo.onrender.com/api/v1/company/update/${params.id}`,
+        `${COMPANY_API_END_POINT}/update/${params.id}`,
         formData,
         {
           headers: {
