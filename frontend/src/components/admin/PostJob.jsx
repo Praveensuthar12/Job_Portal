@@ -51,12 +51,16 @@ const PostJob = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post(`${JOB_API_END_POINT}/post`, input, {
-        headers: {
-          "Content-Type": "application/json",
+      const res = await axios.post(
+        `https://job-portal-itdo.onrender.com/api/v1/job/post`,
+        input,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
         },
-        withCredentials: true,
-      });
+      );
       if (res.data.success) {
         toast.success(res.data.message);
         navigate("/admin/jobs");

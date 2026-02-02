@@ -24,7 +24,7 @@ const JobDescription = () => {
   const applyJobHandler = async () => {
     try {
       const res = await axios.get(
-        `${APPLICATION_API_END_POINT}/apply/${jobId}`,
+        `https://job-portal-itdo.onrender.com/api/v1/application/apply/${jobId}`,
         { withCredentials: true },
       );
 

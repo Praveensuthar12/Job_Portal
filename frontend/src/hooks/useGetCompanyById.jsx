@@ -11,7 +11,7 @@ const useGetCompanyById = (companyId) => {
     const fetchSingleCompany = async () => {
       try {
         const res = await axios.get(
-          `${COMPANY_API_END_POINT}/get/${companyId}`,
+          `https://job-portal-itdo.onrender.com/api/v1/company/get/${companyId}`,
           { withCredentials: true },
         );
         if (res.data.success) {

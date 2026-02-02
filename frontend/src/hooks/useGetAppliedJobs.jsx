@@ -10,9 +10,12 @@ const useGetAppliedJobs = () => {
   useEffect(() => {
     const fetchAppliedJobs = async () => {
       try {
-        const res = await axios.get(`${APPLICATION_API_END_POINT}/get`, {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `https://job-portal-itdo.onrender.com/api/v1/application/get`,
+          {
+            withCredentials: true,
+          },
+        );
         if (res.data.success) {
           dispatch(setAllAppliedJobs(res.data.application));
         }
