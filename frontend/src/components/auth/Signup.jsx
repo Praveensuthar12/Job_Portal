@@ -134,37 +134,39 @@ const Signup = () => {
             />
           </div>
 
-          {/* Role + Profile */}
           <div className="mb-6 space-y-4">
-            {/* Role */}
-            <div>
-              <Label className="text-sm font-medium mb-2 block">
-                Register as
-              </Label>
-              <div className="flex items-center gap-2">
-                <label className="flex items-center gap-2 border rounded-lg px-4 py-2 cursor-pointer hover:border-[#6A38C2]">
-                  <Input
-                    type="radio"
-                    name="role"
-                    value="student"
-                    checked={input.role === "student"}
-                    onChange={changeEventHandler}
-                  />
-                  <span className="text-sm font-medium">Student</span>
-                </label>
+  {/* Role */}
+  <div>
+    <Label className="text-sm font-medium mb-2 block">
+      Register as
+    </Label>
 
-                <label className="flex items-center gap-2 border rounded-lg px-4 py-2 cursor-pointer hover:border-[#6A38C2]">
-                  <Input
-                    type="radio"
-                    name="role"
-                    value="recruiter"
-                    checked={input.role === "recruiter"}
-                    onChange={changeEventHandler}
-                  />
-                  <span className="text-sm font-medium">Recruiter</span>
-                </label>
-              </div>
-            </div>
+    <div className="flex flex-col sm:flex-row gap-3">
+      <label className="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer hover:border-[#6A38C2] w-full sm:w-auto">
+        <Input
+          type="radio"
+          name="role"
+          value="student"
+          checked={input.role === "student"}
+          onChange={changeEventHandler}
+        />
+        <span className="text-sm font-medium">Student</span>
+      </label>
+
+      <label className="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer hover:border-[#6A38C2] w-full sm:w-auto">
+        <Input
+          type="radio"
+          name="role"
+          value="recruiter"
+          checked={input.role === "recruiter"}
+          onChange={changeEventHandler}
+        />
+        <span className="text-sm font-medium">Recruiter</span>
+      </label>
+    </div>
+  </div>
+</div>
+
 
             {/* Profile Upload */}
             <div>
