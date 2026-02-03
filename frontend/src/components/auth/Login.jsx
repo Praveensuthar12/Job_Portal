@@ -93,36 +93,35 @@ const Login = () => {
             />
           </div>
 
-          {/* Role Selection */}
-          <div className="mb-5">
-            <Label className="text-sm font-medium block mb-2">Login as</Label>
+              {/* Role Selection */}
+         <div className="mb-5">
+         <Label className="text-sm font-medium block mb-2">Login as</Label>
 
-            <div className="flex items-center gap-2">
-              <label className="flex items-center gap-2 border rounded-lg px-4 py-2 cursor-pointer hover:border-[#6A38C2]">
-                <Input
-                  type="radio"
-                  name="role"
-                  value="student"
-                  checked={input.role === "student"}
-                  onChange={changeEventHandler}
-                  className="cursor-pointer"
-                />
-                <span className="text-sm font-medium">Student</span>
-              </label>
+        <div className="flex flex-col sm:flex-row gap-3">
+         <label className="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer hover:border-[#6A38C2] w-full sm:w-auto">
+          <Input
+        type="radio"
+        name="role"
+        value="student"
+        checked={input.role === "student"}
+        onChange={changeEventHandler}
+      />
+      <span className="text-sm font-medium">Student</span>
+    </label>
 
-              <label className="flex items-center gap-2 border rounded-lg px-4 py-2 cursor-pointer hover:border-[#6A38C2]">
-                <Input
-                  type="radio"
-                  name="role"
-                  value="recruiter"
-                  checked={input.role === "recruiter"}
-                  onChange={changeEventHandler}
-                  className="cursor-pointer"
-                />
-                <span className="text-sm font-medium">Recruiter</span>
-              </label>
-            </div>
-          </div>
+    <label className="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer hover:border-[#6A38C2] w-full sm:w-auto">
+      <Input
+        type="radio"
+        name="role"
+        value="recruiter"
+        checked={input.role === "recruiter"}
+        onChange={changeEventHandler}
+      />
+      <span className="text-sm font-medium">Recruiter</span>
+    </label>
+  </div>
+</div>
+
 
           {/* Button */}
           {loading ? (
